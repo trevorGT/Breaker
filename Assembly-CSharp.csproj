@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\DyeSet.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PaddleController.cs" />
+     <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

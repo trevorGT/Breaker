@@ -22,6 +22,9 @@ public class DeadZone : MonoBehaviour {
 			GameObject paddle = GameObject.Find ("Paddle");
 			PaddleController paddleController = paddle.GetComponent<PaddleController> ();
 			paddleController.SpawnBall ();
+
+			GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+			gm.Life -= 1;
 		}
 	}
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 
 	public class Brick : MonoBehaviour {
-	public int life = 1;
+	public int health = 1;
 	public int score = 1;
 	public bool isFix = false;
 	// Use this for initialization
@@ -29,15 +29,17 @@ using System.Collections;
 		if (isFix)
 			return;
 
-		life = Mathf.Clamp(life - damage, 0, life);
+		health = Mathf.Clamp(health - damage, 0, health);
 
-		if (life <= 0)
+		if (health <= 0)
 			Dead ();
 	}
 
 	protected virtual void Dead()
 	{
-		Destroy (gameObject);
 		// todo plus score and play animation
+		GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+		gm.Score += score;
+		Destroy (gameObject);
 	}
 }

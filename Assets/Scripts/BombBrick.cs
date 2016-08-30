@@ -4,10 +4,11 @@ using System.Collections;
 public class BombBrick : Brick {
 	public float bombRadius = 1f;
 	public int bombDamage = 2;
+	private ParticleSystem explosionFX;
 	// Use this for initialization
 	void Start () 
 	{
-	
+		explosionFX = GameObject.FindGameObjectWithTag("ExplosionFX").GetComponent<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -23,13 +24,14 @@ public class BombBrick : Brick {
 		foreach (Collider2D col in brickes)
 		{
 			Brick br = col.GetComponent<Brick> ();
-
-			Debug.Log ("br" + br);
 			if (br != null && br.tag == "Brick")
 			{
 				br.Hurt (bombDamage);
 			}
 		}
+
+		explosionFX.transform.position = transform.position;
+		explosionFX.Play ();
 	}
 	
 	protected override void Dead()

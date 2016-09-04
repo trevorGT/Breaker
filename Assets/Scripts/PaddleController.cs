@@ -46,8 +46,8 @@ public class PaddleController : MonoBehaviour {
 			if (Input.GetButtonDown ("Jump"))
 			{
 				Rigidbody2D rgb2d = newBall.GetComponent<Rigidbody2D> ();
-                rgb2d.AddForce (new Vector2 (0, ballForce));
-                newBall = null;
+				rgb2d.AddForce (new Vector2 (0, ballForce));
+				newBall = null;
 			}
 		}
 	}
@@ -58,9 +58,9 @@ public class PaddleController : MonoBehaviour {
 		{
 			if (contact.otherCollider == GetComponent<BoxCollider2D>())
 			{
-                float calc = contact.point.x - transform.position.x;
-                contact.collider.GetComponent<Rigidbody2D> ().AddForce(new Vector2(ballForce * calc, 0.0f));
-            }
+				float calc = contact.point.x - transform.position.x;
+				contact.collider.GetComponent<Rigidbody2D> ().AddForce(new Vector2(ballForce * calc, 0.0f));
+			}
 		}
 	}
 }

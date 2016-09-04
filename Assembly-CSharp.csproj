@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallController.cs" />
+     <Compile Include="Assets\Scripts\BombBrick.cs" />
      <Compile Include="Assets\Scripts\Brick.cs" />
      <Compile Include="Assets\Scripts\BrickBomb.cs" />
      <Compile Include="Assets\Scripts\BrickColor.cs" />

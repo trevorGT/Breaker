@@ -23,7 +23,7 @@ public class BrickBomb : Brick {
 
 		foreach (Collider2D col in brickes) 
 		{
-			Brick br = col.GetComponent<Brick> ();adf
+			Brick br = col.GetComponent<Brick> ();
 			if (br != null && br.tag == "Brick")
 			{
 				br.Hurt (bombDamage);

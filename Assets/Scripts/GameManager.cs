@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour {
 
 	public void OnLevelIsLoaded(int level)
 	{
-		Debug.Log ("test" + level);
 		level++;
 		levelImage = GameObject.Find ("LevelImage");
 		levelText = GameObject.Find ("LevelText").GetComponent<Text>();

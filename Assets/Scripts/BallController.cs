@@ -9,9 +9,18 @@ public enum GameColor
 	GC_BLUE = 3
 };
 
+public enum GameDirection
+{
+	GD_HORIZONTAL = 0,
+	GD_VERTICAL = 1,
+	GD_BOTH
+}
+
 public class BallController : MonoBehaviour
 {
 	public int damage;
+	public Vector2 velocityLimit = new Vector2(10f, 10f);
+	public Vector2 speedUp = new Vector2 (0.5f, 0.5f);
 	private GameColor color;
     private Rigidbody2D rgb2D;
     private Vector2 ballVelocity;
@@ -27,8 +36,8 @@ public class BallController : MonoBehaviour
         if (rgb2D.velocity != ballVelocity)
         {
             ballVelocity = rgb2D.velocity;
-            print(ballVelocity);
         }
+		print ("ballVelocity:" + rgb2D.velocity);
     }
 
 	public GameColor Color
@@ -45,7 +54,7 @@ public class BallController : MonoBehaviour
     {
         foreach (ContactPoint2D contact in col.contacts)
         {
-            rgb2D.velocity = GetBounceVelocity(contact.normal, ballVelocity);
+			rgb2D.velocity = GetBounceVelocity(contact.normal, ballVelocity, col.gameObject);
         }
     }
 
@@ -54,24 +63,44 @@ public class BallController : MonoBehaviour
         print("OnCollisionExit2D");
     }
 
-    Vector2 GetBounceVelocity(Vector2 normal, Vector2 velocity)
+	Vector2 GetBounceVelocity(Vector2 normal, Vector2 velocity, GameObject colObject)
     {
-        float bounceVelocityX, bounceVelocityY;
-        bounceVelocityX = velocity.x;
-        bounceVelocityY = velocity.y;
+		Vector2 bounceVelocity, absVelocity;
 
-        if (normal.x != 0)
-        {
-            bounceVelocityX = velocity.x * -1 + normal.x * 0.5f;
-        }
+		bounceVelocity.x = normal.x != 0 ? -velocity.x : velocity.x;
+		bounceVelocity.y = normal.y != 0 ? -velocity.y : velocity.y;
 
-        if (normal.y != 0)
-        {
-            bounceVelocityY = velocity.y * -1 + normal.y * 0.5f;
-        }
+		bounceVelocity.x += GetSpeedUpValue(normal, colObject.tag, GameDirection.GD_HORIZONTAL);
+		bounceVelocity.y += GetSpeedUpValue(normal, colObject.tag, GameDirection.GD_VERTICAL);
+		// velocity limit
+		absVelocity.x = Mathf.Abs(bounceVelocity.x);
+		absVelocity.y = Mathf.Abs(bounceVelocity.y);
+		
+		absVelocity.x = Mathf.Clamp (absVelocity.y, 0, velocityLimit.x);
+		absVelocity.y = Mathf.Clamp (absVelocity.y, 0, velocityLimit.y);
 
-        return new Vector2(bounceVelocityX, bounceVelocityY);
+		bounceVelocity.x = Mathf.Sign (bounceVelocity.x) * absVelocity.x;
+		bounceVelocity.y = Mathf.Sign (bounceVelocity.y) * absVelocity.y;
+
+		return bounceVelocity;
     }
 
-    
+	float GetSpeedUpValue(Vector2 normal, string colTag, GameDirection direction)
+	{
+		float ret = 0;
+
+		//if (colTag == "Paddle" && normal.y == 1)
+		//{
+			switch (direction)
+			{
+			case GameDirection.GD_HORIZONTAL:
+				ret += speedUp.x * normal.x;
+				break;
+			case GameDirection.GD_VERTICAL:
+				ret += speedUp.y * normal.y;
+				break;
+			}
+		//}
+		return ret;
+	}
 }

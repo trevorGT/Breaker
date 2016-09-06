@@ -5,7 +5,7 @@ public class PaddleController : MonoBehaviour {
 
 	public float paddleSpeed = .2f;
 	public GameObject ballPrefab;
-	public GameObject newBall = null;
+	private GameObject newBall = null;
 	public float ballForce = 200f;
 	// Use this for initialization
 	void Start ()
@@ -21,8 +21,9 @@ public class PaddleController : MonoBehaviour {
 			return;
 		}
 
-		Vector3 ballPosition = transform.position + new Vector3 (0, .3f, 0);
+		Vector3 ballPosition = GetBallInitPosition();
 		newBall = Instantiate(ballPrefab, ballPosition, Quaternion.identity) as GameObject	;
+		newBall.transform.parent = this.transform;
 	}
 	
 	// Update is called once per frame
@@ -42,14 +43,23 @@ public class PaddleController : MonoBehaviour {
 		if (newBall)
 		{
 			Rigidbody2D ballRigidbody = newBall.GetComponent<Rigidbody2D> ();
-			ballRigidbody.position = transform.position + new Vector3 (0, .3f, 0);
+			//ballRigidbody.position = GetBallInitPosition();
 			if (Input.GetButtonDown ("Jump"))
 			{
+				//ballRigidbody.isKinematic = false;
+				newBall.transform.parent = null;
+
 				Rigidbody2D rgb2d = newBall.GetComponent<Rigidbody2D> ();
-                rgb2d.AddForce (new Vector2 (0, ballForce));
+                //rgb2d.AddForce (new Vector2 (0, ballForce));
+				rgb2d.velocity = new Vector2(0, 6);
                 newBall = null;
 			}
 		}
+	}
+
+	Vector3 GetBallInitPosition()
+	{
+		return transform.position + new Vector3 (0, 0.4f, 0);
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
@@ -59,7 +69,7 @@ public class PaddleController : MonoBehaviour {
 			if (contact.otherCollider == GetComponent<BoxCollider2D>())
 			{
                 float calc = contact.point.x - transform.position.x;
-                contact.collider.GetComponent<Rigidbody2D> ().AddForce(new Vector2(ballForce * calc, 0.0f));
+                //contact.collider.GetComponent<Rigidbody2D> ().AddForce(new Vector2(ballForce * calc, 0.0f));
             }
 		}
 	}

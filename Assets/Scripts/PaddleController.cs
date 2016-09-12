@@ -37,7 +37,7 @@ public class PaddleController : MonoBehaviour {
 		//transform.Translate (paddleSpeed * Time.deltaTime * Input.GetAxis ("Horizontal"), 0, 0);
 		float xPos = transform.position.x + (Input.GetAxis("Horizontal") * paddleSpeed);
 		var pos = transform.position;
-		pos.x = Mathf.Clamp (xPos, -2f, 2f);
+		pos.x = Mathf.Clamp (xPos, -0.9f, 0.9f);
 		transform.position = pos;
 
 		if (newBall)
@@ -49,9 +49,10 @@ public class PaddleController : MonoBehaviour {
 				//ballRigidbody.isKinematic = false;
 				newBall.transform.parent = null;
 
-				Rigidbody2D rgb2d = newBall.GetComponent<Rigidbody2D> ();
+                Rigidbody2D rgb2d = newBall.GetComponent<Rigidbody2D> ();
                 //rgb2d.AddForce (new Vector2 (0, ballForce));
-				rgb2d.velocity = new Vector2(0, 6);
+                rgb2d.velocity = new Vector2(0, 2);
+                newBall.GetComponent<BallController>().Speed = 2;
                 newBall = null;
 			}
 		}
@@ -59,7 +60,7 @@ public class PaddleController : MonoBehaviour {
 
 	Vector3 GetBallInitPosition()
 	{
-		return transform.position + new Vector3 (0, 0.4f, 0);
+		return transform.position + new Vector3 (0, 0.25f, 0);
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
@@ -70,6 +71,9 @@ public class PaddleController : MonoBehaviour {
 			{
                 float calc = contact.point.x - transform.position.x;
                 //contact.collider.GetComponent<Rigidbody2D> ().AddForce(new Vector2(ballForce * calc, 0.0f));
+                contact.collider.GetComponent<BallController>().Rotation = contact.collider.GetComponent<BallController>().Rotation + calc*100;
+                print("calc:" + calc);
+                print("Rotation:" + contact.collider.GetComponent<BallController>().Rotation);
             }
 		}
 	}

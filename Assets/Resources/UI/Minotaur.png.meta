@@ -1,0 +1,582 @@
+fileFormatVersion: 2
+guid: e62ec1d13a4705043b0599f588c7c545
+timeCreated: 1473651500
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Minotaur_0
+    21300002: Minotaur_1
+    21300004: Minotaur_2
+    21300006: Minotaur_3
+    21300008: Minotaur_4
+    21300010: Minotaur_5
+    21300012: Minotaur_6
+    21300014: Minotaur_7
+    21300016: Minotaur_8
+    21300018: Minotaur_9
+    21300020: Minotaur_10
+    21300022: Minotaur_11
+    21300024: Minotaur_12
+    21300026: Minotaur_13
+    21300028: Minotaur_14
+    21300030: Minotaur_15
+    21300032: Minotaur_16
+    21300034: Minotaur_17
+    21300036: Minotaur_18
+    21300038: Minotaur_19
+    21300040: Minotaur_20
+    21300042: Minotaur_21
+    21300044: Minotaur_22
+    21300046: Minotaur_23
+    21300048: Minotaur_24
+    21300050: Minotaur_25
+    21300052: Minotaur_26
+    21300054: Minotaur_27
+    21300056: Minotaur_28
+    21300058: Minotaur_29
+    21300060: Minotaur_30
+    21300062: Minotaur_31
+    21300064: Minotaur_32
+    21300066: Minotaur_33
+    21300068: Minotaur_34
+    21300070: Minotaur_35
+    21300072: Minotaur_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 5
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 4
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minotaur_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 371
+        width: 179
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 412
+        width: 120
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_2
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 390
+        width: 108
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_3
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 406
+        width: 36
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 253
+        width: 100
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_5
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 299
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_6
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 301
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_7
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 253
+        width: 106
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 311
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_9
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 265
+        width: 159
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_10
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 265
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_11
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 269
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 244
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 127
+        width: 114
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_14
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 195
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_15
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 120
+        width: 205
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 73
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 195
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_18
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 143
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 141
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_20
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 124
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_21
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 123
+        width: 36
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_22
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 94
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_23
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 119
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_24
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 97
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_26
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 107
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_27
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 163
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_28
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 2
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_29
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 61
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_30
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 62
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_31
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 63
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 78
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_33
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 5
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_34
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 4
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_35
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 28
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Minotaur_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 4
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

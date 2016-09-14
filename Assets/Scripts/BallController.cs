@@ -84,7 +84,7 @@ public class BallController : MonoBehaviour
             Vector2 NewVelocity = new Vector2(speed / edgeC * edgeA, speed / edgeC * edgeB);
             NewVelocity.x = Mathf.Sign(rgb2D.velocity.x) * NewVelocity.x;
             NewVelocity.y = Mathf.Sign(rgb2D.velocity.y) * NewVelocity.y;
-            //rgb2D.velocity = NewVelocity;
+            rgb2D.velocity = NewVelocity;
         }
     }
 
@@ -95,8 +95,10 @@ public class BallController : MonoBehaviour
         {
             rotation = value;
             Vector2 NewVelocity = new Vector2(0, 0);
-            NewVelocity.x = Speed * Mathf.Cos(Rotation);
-            NewVelocity.y = Speed * Mathf.Sin(Rotation);
+            float cornerAngle = 2f * Mathf.PI * rotation / 360f;
+
+            NewVelocity.x = Speed * Mathf.Sin(cornerAngle);
+            NewVelocity.y = Speed * Mathf.Cos(cornerAngle);
             rgb2D.velocity = NewVelocity;
         }
     }
@@ -107,7 +109,7 @@ public class BallController : MonoBehaviour
         {
             //rgb2D.velocity = GetBounceVelocity(contact.normal, ballVelocity, col.gameObject);
             //Speed = Speed + 0.1f;
-            Rotation = 180;
+            Rotation -= 180;
         }
     }
 

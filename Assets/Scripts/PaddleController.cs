@@ -72,8 +72,8 @@ public class PaddleController : MonoBehaviour {
                 float calc = contact.point.x - transform.position.x;
                 //contact.collider.GetComponent<Rigidbody2D> ().AddForce(new Vector2(ballForce * calc, 0.0f));
                 contact.collider.GetComponent<BallController>().Rotation = contact.collider.GetComponent<BallController>().Rotation + calc*100;
-                print("calc:" + calc);
-                print("Rotation:" + contact.collider.GetComponent<BallController>().Rotation);
+                //print("calc:" + calc);
+                //print("Rotation:" + contact.collider.GetComponent<BallController>().Rotation);
             }
 		}
 	}

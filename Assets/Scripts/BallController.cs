@@ -26,7 +26,7 @@ public class BallController : MonoBehaviour
 
     private float speed = 2f;
     public float speedLimit = 3f;
-    private float rotation = 0f;
+    private float rotation = 0;
 
     private GameColor color;
     private Rigidbody2D rgb2D;
@@ -108,8 +108,9 @@ public class BallController : MonoBehaviour
         foreach (ContactPoint2D contact in col.contacts)
         {
             //rgb2D.velocity = GetBounceVelocity(contact.normal, ballVelocity, col.gameObject);
+            print("contact.normal:" + contact.normal);
             //Speed = Speed + 0.1f;
-            Rotation -= 180;
+            //Rotation -= 180;
         }
     }
 
@@ -120,7 +121,7 @@ public class BallController : MonoBehaviour
 
 	Vector2 GetBounceVelocity(Vector2 normal, Vector2 velocity, GameObject colObject)
     {
-		Vector2 bounceVelocity, absVelocity;
+		Vector2 bounceVelocity/*, absVelocity*/;
 
 		bounceVelocity.x = normal.x != 0 ? -velocity.x : velocity.x;
 		bounceVelocity.y = normal.y != 0 ? -velocity.y : velocity.y;

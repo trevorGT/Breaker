@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Breaker;
 
 public class DeadZone : MonoBehaviour {
 
@@ -23,8 +24,7 @@ public class DeadZone : MonoBehaviour {
 			PaddleController paddleController = paddle.GetComponent<PaddleController> ();
 			paddleController.SpawnBall ();
 
-			GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-			gm.Life -= 1;
+			GameManager.Instance.Life -= 1;
 		}
 	}
 }

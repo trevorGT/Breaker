@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Breaker;
 
-	public class Brick : MonoBehaviour {
+public class Brick : MonoBehaviour
+{
 	public int health = 1;
 	public int score = 1;
 	public bool isFix = false;
@@ -38,8 +40,7 @@ using System.Collections;
 	protected virtual void Dead()
 	{
 		// todo plus score and play animation
-		GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-		gm.Score += score;
+		GameManager.Instance.Score += score;
 		Destroy (gameObject);
 	}
 }

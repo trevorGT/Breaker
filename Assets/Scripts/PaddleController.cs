@@ -42,17 +42,18 @@ public class PaddleController : MonoBehaviour {
 
 		if (newBall)
 		{
-			Rigidbody2D ballRigidbody = newBall.GetComponent<Rigidbody2D> ();
+			//Rigidbody2D ballRigidbody = newBall.GetComponent<Rigidbody2D> ();
 			//ballRigidbody.position = GetBallInitPosition();
 			if (Input.GetButtonDown ("Jump"))
 			{
 				//ballRigidbody.isKinematic = false;
 				newBall.transform.parent = null;
-
+                
                 Rigidbody2D rgb2d = newBall.GetComponent<Rigidbody2D> ();
                 //rgb2d.AddForce (new Vector2 (0, ballForce));
                 rgb2d.velocity = new Vector2(0, 2);
                 newBall.GetComponent<BallController>().Speed = 2;
+                newBall.GetComponent<BallController>().Rotation = 45;
                 newBall = null;
 			}
 		}

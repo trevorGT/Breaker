@@ -75,8 +75,8 @@ namespace Breaker
         {
             if (life < 1)
             {
-                Scene scene = SceneManager.GetActiveScene();
-                SceneManager.LoadScene(scene.name);
+                //Scene scene = SceneManager.GetActiveScene();
+                //SceneManagerLoadScene(scene.name);
             }
         }
     }

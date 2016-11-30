@@ -34,7 +34,7 @@ public class BallController : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        rgb2D = GetComponent<Rigidbody2D>();
+        //rgb2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()

@@ -20,11 +20,11 @@ public class BrickColor : Brick
     {
         if (col.gameObject.tag == "Ball")
         {
-            BallController ballCtl = col.gameObject.GetComponent<BallController>();
-            if (ballCtl.Color == color)
-            {
-                Hurt(ballCtl.damage);
-            }
+//             BallController ballCtl = col.gameObject.GetComponent<BallController>();
+//             if (ballCtl.Color == color)
+//             {
+//                 Hurt(ballCtl.damage);
+//             }
         }
     }
 }

@@ -19,7 +19,7 @@ public class DyeSet: MonoBehaviour
 		if (other.gameObject.tag == "Ball")
 		{
 			BallController ballCtl = other.gameObject.GetComponent<BallController> ();
-			ballCtl.Color = color;
+			//ballCtl.Color = color;
 		}
 	}
 }

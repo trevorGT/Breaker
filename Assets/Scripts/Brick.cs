@@ -22,7 +22,7 @@ public class Brick : MonoBehaviour
 		if (col.gameObject.tag == "Ball")
 		{
 			BallController ballCtl = col.gameObject.GetComponent<BallController> ();
-			Hurt (ballCtl.damage);
+			//Hurt (ballCtl.damage);
 		}
 	}
 
@@ -40,7 +40,7 @@ public class Brick : MonoBehaviour
 	protected virtual void Dead()
 	{
 		// todo plus score and play animation
-		GameManager.Instance.Score += score;
-		Destroy (gameObject);
+		//GameManager.Instance.Score += score;
+		//Destroy (gameObject);
 	}
 }

@@ -14,6 +14,9 @@ namespace Game
             base.mapBindings();
 
             injectionBinder.Bind<GameStartSignal>().ToSingleton();
+
+            mediationBinder.Bind<PaddleView>().To<PaddleMediator>();
+            mediationBinder.Bind<BallView>().To<BallMediator>();
         }
     }
 }

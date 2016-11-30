@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Breaker
+namespace Game
 {
     public class PoolManager : Singleton<PoolManager>
     {

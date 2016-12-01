@@ -46,27 +46,59 @@ namespace Game
         
         void Update()
         {
+            //DoingAccelerate();
+            //Debug.Log("ball speed" + speed);
+            //Debug.Log("ball velocity:" + velocity);
+            //DoingDecelerate();
+            Debug.Log("velocity:" + velocity);
+            Debug.Log("dis:" + (velocity.x * velocity.x + velocity.y * velocity.y));
+        }
+        #region accelerate
+        void StartAccelerate()
+        {
+            if (isAccelerate == false)
+            {
+                isAccelerate = true;
+                timeStartAccelerate = Time.time;
+            }
+        }
+
+        float timeStartAccelerate;
+        float timeAccelerateDuringLerp = 1f;
+        void DoingAccelerate()
+        {
             if (isAccelerate)
             {
-                speed = Mathf.Lerp(speed, 2.5f, Time.deltaTime);
-                Debug.Log(speed);
-                //                 if (speed.Equals(2.5f))
-                //                 {
-                //                     isAccelerate = false;
-                //                     isDecelerate = true;
-                //                 }
+                float percentageComplete = (Time.time - timeStartAccelerate) / timeAccelerateDuringLerp;
+                speed = Mathf.Lerp(1f, 2.5f, percentageComplete);
+
+                if (speed.Equals(2.5f))
+                {
+                    //isAccelerate = false;
+                    //StartDecelerate();
+                }
             }
-//             else if (isDecelerate)
-//             {
-//                 speed = Mathf.Lerp(speed, 1f, Time.time);
-// 
-//                 if (speed.Equals(1f))
-//                 {
-//                     isDecelerate = false;
-//                 }
-//             }
-            
         }
+        #endregion
+
+        #region decelerate
+        void StartDecelerate()
+        {
+            isDecelerate = true;
+            timeStartDecelerate = Time.time;
+        }
+
+        float timeStartDecelerate;
+        float timeDecelerateDuringLerp = 1f;
+        void DoingDecelerate()
+        {
+            if (isDecelerate)
+            {
+                float percentageComplete = (Time.time - timeStartDecelerate) / timeDecelerateDuringLerp;
+                speed = Mathf.Lerp(2.5f, 1f, percentageComplete);
+            }
+        }
+        #endregion
 
         void OnCollisionEnter2D(Collision2D col)
         {
@@ -74,18 +106,27 @@ namespace Game
             {
                 Vector2 s = velocity;
                 Vector2 n = contact.normal;
+                //Debug.Log("normal:" + contact.normal);
+                if (contact.collider.gameObject.tag == "Paddle" &&
+                    contact.normal.Equals(new Vector2(0, 1)))
+                {
+                    float calc = contact.point.x - contact.collider.gameObject.transform.position.x;
+                    float angle = Mathf.PI / 2 * calc;
+                    n = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle));
+//                     Debug.Log("angle:" + angle);
+//                     Debug.Log("n:" + new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)));
+//                     Debug.Log("dis:" + (n.x * n.x + n.y * n.y));
+//                     Debug.Log("calc:" + calc);
+                }
+
                 Vector2 c = n * -1;
                 float tempSProductC = Vector2.Dot(s, c);
-                float tempModeN = Mathf.Sqrt(c.x * c.x+ c.y * c.y);
+                float tempModeN = Mathf.Sqrt(c.x * c.x + c.y * c.y);
                 n *= tempSProductC / tempModeN;
 
                 Vector2 f = 2 * n + s;
 
-                if (contact.collider.gameObject.tag == "Paddle")
-                {
-                    f += new Vector2(.5f, 0);
-                }
-                isAccelerate = true;
+                StartAccelerate();
                 velocity = f;
             }
         }
